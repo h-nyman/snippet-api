@@ -6,6 +6,10 @@ Live:
 ## Run Locally
 
 ### Setup Instructions
+Create .env file with your MongoDB connection string as MONGODB_URI.
+
+Proceed to install dependencies and start the server:
+
 ```
 npm install 
 
