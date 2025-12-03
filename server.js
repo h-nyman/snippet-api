@@ -99,6 +99,35 @@ app.get('/api/snippets/:id', async (req, res) => {
   }
 });
 
+// PUT - UPDATE SNIPPPET
+app.put("/api/snippets/:id", async (req, res) => {
+    try {
+        const snippet = await Snippet.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+            runValidators: true
+        });
+        if (!snippet) {
+            return res.status(404).json({ error: "Snippet not found" });
+        }
+        res.status(200).json(snippet);
+    } catch (err) {
+        res.status(400).json({ error: "Invalid update data" });
+    }
+});
+
+// DELETE ONE SNIPPET BY ID
+app.delete("/api/snippets/:id", async (req, res) => {
+    try {
+        const snippet = await Snippet.findByIdAndDelete(req.params.id);
+        if (!snippet) {
+            return res.status(404).json({ error: "Not found" });
+        }
+        res.status(200).json({ message: "Deleted", id: snippet._id });
+    } catch (err) {
+        res.status(400).json({ error: "Invalid id" });
+    }
+});
+
 // 7. START SERVER
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
