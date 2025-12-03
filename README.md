@@ -86,7 +86,7 @@ And lastly, I deleted the snippet:
 
 ```
 % curl --request DELETE \
-  --url http://localhost:3000/api/snippets/692edf753d638d5c156ef07f \
+  --url http://localhost:3000/api/snippets/692edf753d638d5c156ef07f
 ```
 Which deleted the snippet and gave this message: 
 ```
