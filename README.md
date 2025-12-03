@@ -51,7 +51,7 @@ Which gave me this snippet:
 }
 ```
 
-After this I tried to update the snippet (deleting the exclamationmarks):
+After this I tried to update the snippet (deleting the exclamation marks):
 
 ```
 % curl --request PUT \
