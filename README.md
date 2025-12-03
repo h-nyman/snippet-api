@@ -1,7 +1,7 @@
 # Code Snippet Library API (Project 2)
 
 ## Live Deployment
-Live: YOUR_RENDER_URL // The public URL where the live application can be accessed (from Render).
+Live: 
 
 ## Run Locally
 
