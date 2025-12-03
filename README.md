@@ -20,6 +20,7 @@ Open http://localhost:3000/
 
 ## Features
 - Create snippets of code
+- Fetch a single snippet
 - Searching for snippets by filter
 - Update snippets
 - Delete snippets
